@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RealmDB</string>
+    <string name="tv_member_name">name</string>
+    <string name="tv_member_age">age</string>
+    <string name="tv_member_gender">gender</string>
+    <string name="tv_member_email">email</string>
+    <string name="bt_add_member">Add Member</string>
+</resources>
