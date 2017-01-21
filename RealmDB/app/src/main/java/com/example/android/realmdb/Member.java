@@ -9,6 +9,8 @@ import io.realm.annotations.PrimaryKey;
 
 public class Member extends RealmObject {
 
+    //MemberTable을 만들기 위한 DTO
+    //@PrimaryKey 애노테이션을 사용해서 주키를 지정해준다.
     @PrimaryKey
     private int member_id;
 
@@ -17,16 +19,6 @@ public class Member extends RealmObject {
     private String member_gender;
     private String member_email;
     private String member_regdata;
-
-    private int bind;
-
-    public int getBind() {
-        return bind;
-    }
-
-    public void setBind(int bind) {
-        this.bind = bind;
-    }
 
     public int getMember_id() {
         return member_id;

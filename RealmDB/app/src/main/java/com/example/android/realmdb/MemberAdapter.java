@@ -15,7 +15,6 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberViewHolder>{
 
     String TAG;
     private int mNumberItems;
-    private static int viewHolderCount;
     Context context;
 
 
@@ -27,10 +26,9 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberViewHolder>{
     public MemberAdapter(int items,Context context,ListItemClickListener listener) {
         TAG=this.getClass().getName();
         this.context=context;
-
         mNumberItems = items;
         mOnClickListener=listener;
-        viewHolderCount=0;
+
     }
 
 
@@ -43,7 +41,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberViewHolder>{
         View view=inflater.inflate(listItem,viewGroup,shouldAttachToParentImmediately);
         MemberViewHolder memberViewHolder=new MemberViewHolder(view,context,mOnClickListener);
 
-        viewHolderCount++;
+
         return memberViewHolder;
     }
 
@@ -61,7 +59,4 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberViewHolder>{
         return mNumberItems;
     }
 
-    public void removeViewHolder(){
-        viewHolderCount--;
-    }
 }

@@ -52,6 +52,8 @@ public class MemberViewHolder extends RecyclerView.ViewHolder implements View.On
     }
 
     void bind(int listIndex) {
+        // 리사이클러뷰에 아이템의 인덱스 값에 데이터를 바인드 시킨다.
+        // 전체 디비에서 해당 index와 같은 위치에 데이터 값을 바인드 시킴.
         RealmResults<Member> result = memberSize.where().findAll();
         Member member = result.get(listIndex);
         mMemberId.setText(String.valueOf(member.getMember_id()));
